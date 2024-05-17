@@ -21,17 +21,15 @@ public class cCliente {
     @Column(name = "Nombres", length = 50)
     private String nombres;
 
-    @Column(name = "Dni", length = 100)
-    private String dni;
-
     @Column(name = "Apellidos", length = 100)
     private String apellidos;
+
+    @Column(name = "Dni", length = 100)
+    private String dni;
 
     @Column(name = "Direccion", length = 200)
     private String direccion;
 
-    @Column(name = "Ciudad", length = 100)
-    private String ciudad;
     
     
     //constructores
@@ -39,22 +37,20 @@ public class cCliente {
     }
 
 
-    public cCliente(int id, String nombres, String dni, String apellidos, String direccion, String ciudad) {
+    public cCliente(int id, String nombres, String apellidos, String dni, String direccion) {
         this.id = id;
         this.nombres = nombres;
-        this.dni = dni;
         this.apellidos = apellidos;
+        this.dni = dni;
         this.direccion = direccion;
-        this.ciudad = ciudad;
     }
 
 
-    public cCliente(String nombres, String dni, String apellidos, String direccion, String ciudad) {
+    public cCliente(String nombres, String apellidos,String dni, String direccion) {
         this.nombres = nombres;
-        this.dni = dni;
         this.apellidos = apellidos;
+        this.dni = dni;
         this.direccion = direccion;
-        this.ciudad = ciudad;
     }
 
 
@@ -77,6 +73,14 @@ public class cCliente {
         this.nombres = nombres;
     }
 
+    public String getApellidos() {
+        return apellidos;
+    }
+
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
 
     public String getDni() {
         return dni;
@@ -85,16 +89,6 @@ public class cCliente {
 
     public void setDni(String dni) {
         this.dni = dni;
-    }
-
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
     }
 
 
@@ -107,15 +101,6 @@ public class cCliente {
         this.direccion = direccion;
     }
 
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
 
 
 }

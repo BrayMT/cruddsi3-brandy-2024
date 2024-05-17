@@ -26,7 +26,7 @@ public class cClienteRestController {
         return service.find();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}")    
     public Optional<cCliente> findById(@PathVariable("id") int id){
         return service.findById(id);
     }
