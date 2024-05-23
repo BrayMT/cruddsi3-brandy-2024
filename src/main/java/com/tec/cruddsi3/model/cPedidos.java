@@ -21,7 +21,7 @@ public class cPedidos {
     private String nombre_pedido;
 
     @Column(name = "cantidad", length = 50)
-    private double cantidad;
+    private String cantidad;
 
     @Column(name = "fecha_pedido", length = 300)
     private String fecha_pedido;
@@ -29,7 +29,7 @@ public class cPedidos {
 
     public cPedidos() {
     }
-    public cPedidos(int id, String nombre_pedido, double cantidad, String fecha_pedido) {
+    public cPedidos(int id, String nombre_pedido, String cantidad, String fecha_pedido) {
         this.id = id;
         this.nombre_pedido = nombre_pedido;
         this.cantidad = cantidad;
@@ -39,7 +39,7 @@ public class cPedidos {
 
 
 
-    public cPedidos(String nombre_pedido, double cantidad, String fecha_pedido) {
+    public cPedidos(String nombre_pedido, String cantidad, String fecha_pedido) {
         this.nombre_pedido = nombre_pedido;
         this.cantidad = cantidad;
         this.fecha_pedido = fecha_pedido;
@@ -61,11 +61,11 @@ public class cPedidos {
         this.nombre_pedido = nombre_pedido;
     }
 
-    public double getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 

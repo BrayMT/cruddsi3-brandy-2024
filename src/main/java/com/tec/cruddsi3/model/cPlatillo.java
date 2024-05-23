@@ -26,13 +26,13 @@ public class cPlatillo {
     @Column(name = "categoria", length = 1000)
     private String categoria;
    
-    @Column(name = "precio", columnDefinition = "decimal(18,2)")
-    private double precio;
+    @Column(name = "precio", length = 1000)
+    private String precio;
 
     public cPlatillo() {
     }
 
-    public cPlatillo(int id, String nombre_platillo, String descripcion, String categoria, double precio) {
+    public cPlatillo(int id, String nombre_platillo, String descripcion, String categoria, String precio) {
         this.id = id;
         this.nombre_platillo = nombre_platillo;
         this.descripcion = descripcion;
@@ -40,7 +40,7 @@ public class cPlatillo {
         this.precio = precio;
     }
 
-    public cPlatillo(String nombre_platillo, String descripcion, String categoria, double precio) {
+    public cPlatillo(String nombre_platillo, String descripcion, String categoria, String precio) {
         this.nombre_platillo = nombre_platillo;
         this.descripcion = descripcion;
         this.categoria = categoria;
@@ -79,11 +79,11 @@ public class cPlatillo {
         this.categoria = categoria;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
